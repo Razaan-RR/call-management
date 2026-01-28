@@ -1,10 +1,25 @@
+import { useNavigate } from 'react-router-dom'
+
 export default function Profile() {
+  const navigate = useNavigate()
+
   return (
     <div
       className="min-h-full py-2"
       style={{ backgroundColor: 'var(--dashboard-bg)' }}
     >
       <div className="max-w-4xl mx-auto sm:ml-0.5">
+        <div className="mb-8">
+          <div className="flex items-center gap-12 mb-6">
+            <h1 className="text-white text-xl font-medium">Profile</h1>
+            <span className="text-white/80 text-lg font-normal">
+              Password Settings
+            </span>
+          </div>
+
+          <p className="text-white text-base mb-6">Profile Image</p>
+        </div>
+
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8 mb-10">
           <div className="relative">
             <div className="w-24 h-24 rounded-full overflow-hidden ring-2 ring-white/20">
@@ -16,6 +31,7 @@ export default function Profile() {
             </div>
 
             <button
+              onClick={() => navigate('/edit-profile')}
               className="absolute -right-24 bottom-2 px-3 py-1 rounded-full text-xs text-white"
               style={{
                 background:

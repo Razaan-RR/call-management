@@ -4,6 +4,7 @@ import Dashboard from '../pages/Dashboard'
 import CallLogs from '../pages/CallLogs'
 import Appointments from '../pages/Appointments'
 import Settings from '../pages/Settings'
+import EditProfile from '../components/settings/EditProfile'
 
 const router = createBrowserRouter([
   {
@@ -13,7 +14,8 @@ const router = createBrowserRouter([
       { index: true, element: <Dashboard /> },
       { path: 'calls', element: <CallLogs /> },
       { path: 'appointments', element: <Appointments /> },
-      { path: 'settings', element: <Settings/> },
+      { path: 'settings', element: <Settings /> },
+      { path: 'edit-profile', element: <EditProfile /> },
     ],
   },
 ])
