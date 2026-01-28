@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+:root {
+  --sidebar-gradient: linear-gradient(180deg, #0b1535 0%, #0a1a3f 100%);
+  --sidebar-active: linear-gradient(
+    90deg,
+    rgba(255,255,255,0.35),
+    rgba(255,255,255,0.15)
+  );
+  --sidebar-glow: 0 0 20px rgba(255,255,255,0.25);
+
+  --text-white: #ffffff;
+  --text-muted: rgba(255,255,255,0.85);
+  --danger: #ff1100;
+
+  --sidebar-width: 241px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
