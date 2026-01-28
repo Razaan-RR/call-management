@@ -6,13 +6,13 @@ export default function BookingDetails() {
       <div
         className="rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row gap-4 sm:items-center"
         style={{
-          backgroundColor: '#0E1735',
+          background: 'linear-gradient(180deg, #1A1A2E 0%, #16213E 100%)',
           boxShadow:
             'inset 0 0 0 1px rgba(255,255,255,0.05), 0 16px 32px rgba(0,0,0,0.35)',
         }}
       >
         <div className="flex-1 space-y-2">
-          <p className="text-white/70 text-sm">Booking Link</p>
+          <p className="text-white text-sm">Booking Link</p>
           <div className="w-full rounded-xl px-4 py-3 bg-[#0B122C] border border-emerald-500/30 text-sm text-white truncate">
             https://techstore.com/book?id=store123
           </div>
@@ -35,7 +35,7 @@ export default function BookingDetails() {
         <div className="overflow-x-auto">
           <table className="min-w-[900px] w-full text-sm">
             <thead>
-              <tr className="border-b border-white/10 text-white/70">
+              <tr className="border-b border-white/10 text-white">
                 <th className="px-6 py-4 text-left font-medium">Client Name</th>
                 <th className="px-6 py-4 text-left font-medium">
                   Client Phone
@@ -75,19 +75,25 @@ export default function BookingDetails() {
         </button>
 
         <div className="flex items-center gap-2">
-          <span className="text-blue-400">1</span>
+          <span style={{ color: '#0F62FE' }}>1</span>
           <span className="w-10 h-10 flex items-center justify-center bg-blue-200 text-blue-900 font-medium">
             2
           </span>
-          <span className="text-blue-400">3</span>
-          <span className="text-blue-400">4</span>
-          <span className="text-blue-400">5</span>
-          <span className="text-blue-400">…</span>
-          <span className="text-blue-400">11</span>
+          <span style={{ color: '#0F62FE' }}>3</span>
+          <span style={{ color: '#0F62FE' }}>4</span>
+          <span style={{ color: '#0F62FE' }}>5</span>
+          <span style={{ color: '#0F62FE' }}>…</span>
+          <span style={{ color: '#0F62FE' }}>11</span>
         </div>
 
-        <button className="flex items-center gap-1 hover:text-white text-blue-400">
-          <span className="hidden sm:inline text-blue-400">Next</span>›
+        <button
+          style={{ color: '#0F62FE' }}
+          className="flex items-center gap-1 hover:text-white"
+        >
+          <span style={{ color: '#0F62FE' }} className="hidden sm:inline">
+            Next
+          </span>
+          ›
         </button>
       </div>
     </div>

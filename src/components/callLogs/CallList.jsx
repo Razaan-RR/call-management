@@ -1,10 +1,4 @@
-import {
-  Phone,
-  Search,
-  Clock,
-  CheckCircle2,
-  AlertCircle,
-} from 'lucide-react'
+import { Phone, Search, Clock, CheckCircle2, AlertCircle } from 'lucide-react'
 import { useState } from 'react'
 
 const calls = [
@@ -106,8 +100,8 @@ export default function CallList() {
           {filteredCalls.map((c, i) => (
             <div
               key={i}
-              className={`px-6 py-4 flex gap-4 ${
-                c.active ? 'bg-blue-500/10 border-l-2 border-blue-400' : ''
+              className={`px-6 py-4 flex gap-4 border-b-2 ${
+                c.active ? 'border-blue-400' : ''
               }`}
             >
               <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-sky-500 to-blue-600 flex items-center justify-center shrink-0">
@@ -126,7 +120,7 @@ export default function CallList() {
 
                 <p className="text-xs text-white/50">{c.time}</p>
 
-                <div className="flex flex-wrap items-center gap-4 mt-2 text-xs text-white/60">
+                <div className="flex flex-wrap items-center gap-4 pt-4 -ml-14 text-xs text-white/60">
                   <span className="flex items-center gap-1">
                     <Clock size={13} />
                     {c.duration}
@@ -141,9 +135,7 @@ export default function CallList() {
                     {c.note}
                   </span>
 
-                  <span
-                    className={`px-2 py-0.5 rounded-md ${c.tagColor}`}
-                  >
+                  <span className={`px-2 py-0.5 rounded-md ${c.tagColor}`}>
                     {c.tag}
                   </span>
                 </div>
