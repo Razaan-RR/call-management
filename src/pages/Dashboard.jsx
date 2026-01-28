@@ -23,7 +23,7 @@ export default function Dashboard() {
           value="127"
           change="+12%"
           icon={Phone}
-          iconBg="bg-sky-500"
+          iconBg="bg-gradient-to-br from-[#2B7FFF] to-[#00B8DB]"
           positive
         />
         <StatCard
@@ -31,7 +31,7 @@ export default function Dashboard() {
           value="98"
           change="+77%"
           icon={Bot}
-          iconBg="bg-pink-500"
+          iconBg="bg-gradient-to-br from-[#AD46FF] to-[#F6339A]"
           positive
         />
         <StatCard
@@ -39,7 +39,7 @@ export default function Dashboard() {
           value="23"
           change="+18%"
           icon={ArrowLeftRight}
-          iconBg="bg-orange-500"
+          iconBg="bg-gradient-to-br from-[#FF6900] to-[#FB2C36]"
           positive
         />
         <StatCard
@@ -47,7 +47,7 @@ export default function Dashboard() {
           value="34"
           change="+8%"
           icon={Calendar}
-          iconBg="bg-emerald-500"
+          iconBg="bg-gradient-to-br from-[#00C950] to-[#00BC7D]"
           positive
         />
         <StatCard
@@ -55,7 +55,7 @@ export default function Dashboard() {
           value="6"
           change="-3%"
           icon={X}
-          iconBg="bg-red-500"
+          iconBg="bg-gradient-to-br from-[#FB2C36] to-[#FF2056]"
           circle
         />
         <StatCard
@@ -63,7 +63,7 @@ export default function Dashboard() {
           value="3:42"
           change="+15%"
           icon={Clock}
-          iconBg="bg-indigo-500"
+          iconBg="bg-gradient-to-br from-[#615FFF] to-[#2B7FFF]"
           positive
         />
       </div>

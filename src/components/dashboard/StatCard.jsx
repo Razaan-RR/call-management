@@ -19,18 +19,24 @@ export default function StatCard({
       <div className="flex items-start justify-between">
         <p className="text-sm text-white/60">{title}</p>
         <div
-          className={`w-10 h-10 ${
-            circle ? 'rounded-full' : 'rounded-xl'
-          } flex items-center justify-center ${iconBg}`}
+          className={`w-10 h-10 rounded-xl flex items-center justify-center ${iconBg}`}
         >
-          <Icon size={20} className="text-white" />
+          {circle ? (
+            <div className="w-6 h-6 rounded-full border-[1.5px] border-white flex items-center justify-center">
+              <Icon size={14} className="text-white" />
+            </div>
+          ) : (
+            <Icon size={20} className="text-white" />
+          )}
         </div>
       </div>
 
       <div className="flex flex-col gap-1">
-        <span className="text-[34px] text-white leading-none">{value}</span>
+        <span className="text-[30px] font-normal text-white leading-none">
+          {value}
+        </span>
         <span
-          className={`text-sm ${
+          className={`pt-2 text-sm ${
             positive ? 'text-emerald-400' : 'text-red-400'
           }`}
         >
