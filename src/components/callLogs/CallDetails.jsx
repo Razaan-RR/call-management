@@ -45,23 +45,23 @@ export default function CallDetails() {
           </div>
 
           <div className="space-y-3 text-xs leading-relaxed">
-            <p>
+            <p className='text-white'>
               <span className="text-emerald-400">AI Assistant:</span> Thank you
               for calling UBreakiFix! How can I help you today?
             </p>
-            <p>
+            <p className='text-white'>
               <span className="text-sky-400">Customer:</span> Hi, my iPhone 13
               screen is cracked. How much would it cost to repair?
             </p>
-            <p>
+            <p className='text-white'>
               <span className="text-emerald-400">AI Assistant:</span> For an
               iPhone 13 screen repair, the price is $199 with a 90-day warranty.
             </p>
-            <p>
+            <p className='text-white'>
               <span className="text-sky-400">Customer:</span> When are you
               available?
             </p>
-            <p>
+            <p className='text-white'>
               <span className="text-emerald-400">AI Assistant:</span> Today at
               2:00 PM or tomorrow at 10:00 AM.
             </p>

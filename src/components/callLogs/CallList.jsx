@@ -1,4 +1,10 @@
-import { Phone, Search } from 'lucide-react'
+import {
+  Phone,
+  Search,
+  Clock,
+  CheckCircle2,
+  AlertCircle,
+} from 'lucide-react'
 import { useState } from 'react'
 
 const calls = [
@@ -20,7 +26,7 @@ const calls = [
     status: 'Warm Transfer',
     statusColor: 'bg-orange-500/20 text-orange-400',
     tag: 'Software',
-    tagColor: 'bg-indigo-500/20 text-indigo-400',
+    tagColor: 'bg-blue-500/20 text-blue-400',
     note: 'Escalated to technician',
   },
   {
@@ -30,7 +36,7 @@ const calls = [
     status: 'Appointment',
     statusColor: 'bg-sky-500/20 text-sky-400',
     tag: 'Battery',
-    tagColor: 'bg-emerald-500/20 text-emerald-400',
+    tagColor: 'bg-blue-500/20 text-blue-400',
     note: 'Appointment Booked',
   },
   {
@@ -40,8 +46,18 @@ const calls = [
     status: 'Dropped',
     statusColor: 'bg-red-500/20 text-red-400',
     tag: 'Unknown',
-    tagColor: 'bg-gray-500/20 text-gray-400',
+    tagColor: 'bg-blue-500/20 text-blue-400',
     note: 'Call Dropped',
+  },
+  {
+    number: '+1 (555) 345-6789',
+    time: '2025-12-16 • 09:42 AM',
+    duration: '5:23',
+    status: 'AI Resolved',
+    statusColor: 'bg-emerald-500/20 text-emerald-400',
+    tag: 'Screen',
+    tagColor: 'bg-blue-500/20 text-blue-400',
+    note: 'Quote Provided',
   },
 ]
 
@@ -91,29 +107,43 @@ export default function CallList() {
             <div
               key={i}
               className={`px-6 py-4 flex gap-4 ${
-                c.active ? 'bg-blue-500/10' : ''
+                c.active ? 'bg-blue-500/10 border-l-2 border-blue-400' : ''
               }`}
             >
-              <div className="w-10 h-10 rounded-xl bg-sky-500 flex items-center justify-center">
+              <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-sky-500 to-blue-600 flex items-center justify-center shrink-0">
                 <Phone size={18} className="text-white" />
               </div>
 
-              <div className="flex-1">
+              <div className="flex-1 space-y-1">
                 <div className="flex items-center justify-between">
                   <p className="text-white text-sm">{c.number}</p>
                   <span
-                    className={`text-xs px-2 py-0.5 rounded-full ${c.statusColor}`}
+                    className={`text-xs px-3 py-1 rounded-full ${c.statusColor}`}
                   >
                     {c.status}
                   </span>
                 </div>
 
-                <p className="text-xs text-white/50 mt-0.5">{c.time}</p>
+                <p className="text-xs text-white/50">{c.time}</p>
 
-                <div className="flex items-center gap-3 mt-2 text-xs text-white/60">
-                  <span>{c.duration}</span>
-                  <span>{c.note}</span>
-                  <span className={`px-2 py-0.5 rounded ${c.tagColor}`}>
+                <div className="flex flex-wrap items-center gap-4 mt-2 text-xs text-white/60">
+                  <span className="flex items-center gap-1">
+                    <Clock size={13} />
+                    {c.duration}
+                  </span>
+
+                  <span className="flex items-center gap-1">
+                    {c.status === 'Dropped' ? (
+                      <AlertCircle size={13} />
+                    ) : (
+                      <CheckCircle2 size={13} />
+                    )}
+                    {c.note}
+                  </span>
+
+                  <span
+                    className={`px-2 py-0.5 rounded-md ${c.tagColor}`}
+                  >
                     {c.tag}
                   </span>
                 </div>
