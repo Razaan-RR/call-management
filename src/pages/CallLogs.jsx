@@ -1,7 +1,15 @@
+import { useEffect } from "react";
+import { useOutletContext } from "react-router-dom";
 import CallDetails from "../components/callLogs/CallDetails";
 import CallList from "../components/callLogs/CallList";
 
 export default function CallLogs() {
+  const { setTitle } = useOutletContext();
+
+  useEffect(() => {
+    setTitle("Call Logs & History");
+  }, []);
+
   return (
     <div
       className="min-h-full px-8 py-6"

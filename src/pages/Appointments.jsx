@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import AppointmentStats from '../components/appointments/AppointmentStats'
 import BookingDetails from '../components/appointments/BookingDetails'
+import { useOutletContext } from 'react-router'
 
 function Appointments() {
+  const { setTitle } = useOutletContext()
+
+  useEffect(() => {
+    setTitle('Appointments')
+  }, [])
   return (
     <div
       className="min-h-full px-8 py-6"

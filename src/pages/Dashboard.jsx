@@ -2,8 +2,16 @@ import { Phone, Bot, ArrowLeftRight, Calendar, X, Clock } from 'lucide-react'
 import StatCard from '../components/dashboard/StatCard'
 import DashChart from '../components/dashboard/DashChart'
 import DashboardExtras from '../components/dashboard/DashboardExtras'
+import { useEffect } from 'react'
+import { useOutletContext } from 'react-router'
 
 export default function Dashboard() {
+  const { setTitle } = useOutletContext()
+
+  useEffect(() => {
+    setTitle('Dashboard Overview')
+  }, [])
+
   return (
     <div
       className="min-h-full px-8 py-6 space-y-8"
